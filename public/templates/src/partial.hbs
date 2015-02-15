@@ -1,1 +1,109 @@
-<p>{{ test }}</p>
+<div class="container">
+	<h3>{{_ 'Powered by' }}</h3>
+	<div class="row">
+	   <div class="col-lg-12">
+	      <div class="col-md-3">
+	         <ul class="nav nav-pills nav-stacked">
+	            <li>
+	            	<h4><span>{{_ 'Libraries' }}</span></h4>
+	            </li>
+	            {{#poweredby}}
+            	<li class="dropdown">
+                  <a href="{{website}}" data-toggle="dropdown" class="dropdown-toggle">
+                    {{coreDependency}} + <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                  	{{#dependencyPlugins}}
+                    <li><a href="{{website}}" target="_blank">{{name}}</a></li>
+                    {{/dependencyPlugins}}
+                  </ul>
+            	</li>
+            	{{/poweredby}}
+	         </ul>
+	      </div>
+	      <div class="col-md-3">
+	         <ul class="nav nav-pills nav-stacked">
+	            <li>
+	            	<h4><span>{{_ 'Services' }}</span></h4>
+	            </li>
+            	<li><a href="https://github.com/" target="_blank">Github</a></li>
+                <li><a href="http://cdnjs.com/" target="_blank">CDNjs</a></li>
+                <li><a href="http://www.jsdelivr.com/" target="_blank">jsDelivr</a></li>
+				<li><a href="http://www.blogger.com/" target="_blank">Blogger</a></li>
+                <li class="dropdown">
+                  <a href="http://getbootstrap.com/2.3.2/" target="_blank" data-toggle="dropdown" class="dropdown-toggle">
+                    Bootstrap sites <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="http://bootswatch.com/" target="_blank">Bootswatch</a></li>
+                    <li><a href="http://bootsnipp.com/" target="_blank">Bootsnipp</a></li>
+                    <li><a href="http://bootstraptor.com" target="_blank">Bootstraptor</a></li>
+                  </ul>
+            	</li>
+            </ul>
+	         </ul>
+	      </div>
+	      <div class="col-md-3">
+	         <ul class="nav nav-pills nav-stacked">
+	            <li>
+	            	<h4><span>{{_ 'Contributors' }}</span></h4>
+	            <li>
+	            <li class="dropdown">
+                  <a href="#" data-toggle="dropdown" class="dropdown-toggle">{{_ 'Wade Penistone' }} <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://github.com/Truemedia/Regeneration-Primer">GitHub</a></li>
+                    <li><a href="http://www.youtube.com/user/MCOMediaCityOnline">YouTube</a></li>
+                    <li class="divider"></li>
+                    <li><a href="https://github.com/Truemedia">{{_ 'My other open source projects' }}</a></li>
+                  </ul>
+            	</li>
+	         </ul>
+	      </div>
+	      <div class="col-md-3">
+	         <ul class="nav nav-pills nav-stacked">
+	            <li>
+	            	<h4><span>{{_ 'Tools' }}</span></h4>
+	            <li>
+	            <li><a href="http://www.eclipse.org/" target="_blank">Eclipse</a></li>
+                <li><a href="http://www.mapeditor.org/" target="_blank">Tiled</a></li>
+                <li><a href="http://www.aseprite.org/" target="_blank">Aseprite</a></li>
+	         </ul>
+	      </div>
+	   </div>
+	</div>
+	<hr>
+	<div class="row">
+	   <div class="col-lg-12">
+	      <h4><span>{{_ 'Regeneration game engine' }}</span></h4>
+	      <div class="col-md-8">
+	      	<p>
+	      		Links relevant to all areas of your site go here
+	      	</p>
+		  	<p>
+				<a href="https://github.com/Truemedia/Regeneration-Primer"
+				   class="btn btn-danger">{{_ 'Want to contribute to this project? See here' }}</a>
+			</p>
+	      </div>
+	      <div class="col-md-4">
+	      	 <p>
+				{{_ 'Concept, Design, Development, Graphics, and Soundtrack by' }} <br/>
+				<a href="http://github.com/Truemedia">{{_ 'Wade Penistone' }} (Truemedia)</a>
+			 </p>
+			 <p>
+				{{_ 'Sound effects provided by' }} <br />
+				<a href="http://freesound.org">FreeSound</a>
+			 </p>
+	         <p class="muted pull-right">&copy; {{_ 'Wade Penistone' }} 2014</p>
+	      </div>
+	      <div class="form-group">
+				<label for="language">{{_ 'Language' }}</label>
+				<select id="language" class="form-control">
+					{{#languages}}
+					<option {{lang_selected}}value="{{lang_code}}">{{lang_name}}</option>
+					{{/languages}}
+				</select>
+				<!--<select class="input-medium bfh-languages" data-language="en_US" data-available="en_US,fr_CA,es_MX"></select>-->
+			</div>
+	   </div>
+	</div>
+</div>
